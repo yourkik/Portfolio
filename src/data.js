@@ -34,16 +34,50 @@ export const portfolioData = {
   ],
   projects: [
     {
-      id: "subway-simulation",
-      title: "지하철 노선 직결화 B/C 분석 시뮬레이션",
+      id: "gcf-project",
+      title: "GCF Project 정보 공개 통합 데이터베이스 구축",
       meta: [
-        { iconName: "Map", text: "5호선 길동-둔촌 직결화 시나리오 분석" },
+        { iconName: "Database", text: "데이터 엔지니어링" },
+        { text: "팀 프로젝트" }
+      ],
+      tags: ["Python", "Pandas", "Data Pipeline"],
+      overview: "GCF Project 정보 공개 사이트 제작을 위해 다양한 포맷(VROD, OffsetDB 등)의 비정형 데이터를 확보, 분석 및 정제하여 하나의 일관된 데이터베이스를 구축했습니다.",
+      approach: "업데이트가 중단된 기존 API의 한계를 파악하여 원본 엑셀 파일에 직접 접근하는 추출 파이프라인을 구축했습니다. 상이한 데이터 표기법을 표준화하고 텍스트 정규화 전처리 로직을 설계했습니다.",
+      result: "다양한 이종 데이터를 통합하여 고품질의 DB를 성공적으로 구축하였으며, 향후 데이터 분석가가 즉시 활용할 수 있는 안정적인 환경을 마련했습니다.",
+      links: [
+        { title: "Colab", url: "https://colab.research.google.com/drive/1HneN3OGKX14mUDzNA7mdWhk5rXTLEraK?usp=sharing", iconName: "googleColab" }
+      ]
+    },
+    {
+      id: "ecommerce-growth",
+      title: "이커머스 Growth Hacking 대용량 로그 분석 및 BI 구축",
+      meta: [
+        { iconName: "Database", text: "데이터 분석 및 엔지니어링" },
         { text: "개인 프로젝트" }
       ],
-      tags: ["Python", "Data Analysis", "ODSAY API"],
-      overview: "5호선 길동역과 둔촌동역의 직결화 사업에 대한 기존 연구의 비용/편익(B/C) 타당성을 검증하기 위해 실제 지하철/버스 OD 데이터와 새로운 교통망 시나리오를 반영한 시뮬레이터를 개발했습니다.",
-      approach: "지하철과 버스의 O/D(기종점) 데이터와 각 역의 좌표 정보, ODSAY API를 활용한 최소 경로 및 시간 데이터를 수집하여 통행량을 추정했습니다. 특히 완공 예정인 송파하남선과 9호선 연장 역들을 시뮬레이터에 추가 반영하여 미래 수요를 예측했습니다.",
-      result: "미래 교통망 변화를 반영한 시뮬레이션 결과, 사용자 수와 시간 편익 측면에서 기존 연구 대비 수익성이 크게 하락함을 입증해냈으며, 이를 보완할 수 있는 새로운 노선 운영 해결책을 제안했습니다.",
+      tags: ["SQL", "BigQuery", "Python", "Looker Studio"],
+      overview: "약 5GB, 4,000만 건 이상의 대용량 이커머스 로그 데이터를 BigQuery 환경에 적재하고 AARRR 프레임워크 기반으로 분석한 그로스 해킹 프로젝트입니다.",
+      approach: "대용량 데이터를 분석하기 위한 인프라를 구축한 뒤, 퍼널 분석과 코호트 분석을 진행했습니다. 발견된 인사이트를 바탕으로 핵심 KPI를 실시간 모니터링할 수 있는 BI 대시보드를 연동했습니다.",
+      result: "가입 1일 차 이탈률(90%)의 병목을 수치화하고, 이를 개선하기 위한 CRM 마케팅 A/B 테스트 전략을 도출하여 데이터 기반의 실질적 해결책을 제시했습니다.",
+      links: [
+        {
+          title: "보고서 보기",
+          url: "https://detailed-nerine-1ce.notion.site/Big-Query-Ecomerce-35f02e2b71278096848cea9e15dc6f39?source=copy_link",
+          iconName: "notion"
+        }
+      ]
+    },
+    {
+      id: "subway-simulation",
+      title: "다양한 공공 데이터 통합 기반 지하철 5호선 직결화 B/C 분석 시뮬레이터 개발",
+      meta: [
+        { iconName: "Map", text: "5호선 직결화 시나리오 분석" },
+        { text: "개인 프로젝트" }
+      ],
+      tags: ["Python", "NetworkX", "ODSAY API"],
+      overview: "5호선 직결화 사업에 대한 기존 연구의 비용/편익(B/C) 타당성을 검증하기 위해, 교통 및 이동 관련 공공 데이터를 기반으로 미래 교통망 시나리오를 반영한 시뮬레이터를 개발했습니다.",
+      approach: "OD 데이터, 역간 거리, 지하철 공사 계획표, 최소 경로 등 다양한 형태의 국가/공공 데이터를 ODSAY API와 매핑하여 일관된 분석용 데이터로 통합했습니다. 미래에 완공될 연장 노선 수요를 예측하는 자체 네트워크 모델을 구축했습니다.",
+      result: "통합 데이터를 통한 시뮬레이션 결과, 사용자 수와 시간 편익 측면에서 기존 타당성 연구 대비 실질 편익이 약 16% 하락할 가능성을 객관적 수치로 증명했습니다.",
       links: [
         { title: "GitHub", url: "https://github.com/yourkik/Analysis-Line5-Direct-Connection/tree/main", iconName: "github" },
         { title: "보고서 보기", url: "https://github.com/yourkik/Analysis-Line5-Direct-Connection/tree/main/docs", iconName: "github" }
@@ -51,15 +85,15 @@ export const portfolioData = {
     },
     {
       id: "synthetic-data",
-      title: "합성 데이터를 활용한 AI 학습 변화 탐구",
+      title: "AI 학습용 합성 데이터 검증 자동화 파이프라인 구축",
       meta: [
         { iconName: "Terminal", text: "Aimmo 현장실습 (2개월)" },
         { text: "현장 실습" }
       ],
-      tags: ["Synthetic Data", "Computer Vision", "Data Augmentation"],
-      overview: "에이모(Aimmo) 현장실습 기간 동안 실제 데이터 수집의 한계를 극복하기 위해 합성 데이터(Synthetic Data)를 생성하고 이를 AI 모델 학습에 적용하는 연구를 수행했습니다.",
-      approach: "현업 환경에서 데이터 파이프라인의 구조를 파악하고, 합성 데이터의 품질과 다양성이 AI 모델의 정확도 및 일반화 성능에 미치는 영향을 정량적으로 비교 분석했습니다.",
-      result: "고품질 데이터 확보의 중요성과 최신 전처리 기법 실무를 경험할 수 있었습니다.",
+      tags: ["Python", "PyTorch", "Synthetic Data"],
+      overview: "에이모(Aimmo) 현장실습 기간 동안 실제 데이터 수집 비용의 한계를 극복하기 위해 합성 데이터(Synthetic Data)를 생성하고 검증하는 자동화 파이프라인 연구를 수행했습니다.",
+      approach: "원본 데이터와 합성 데이터를 무작위로 교차 투입하여 시맨틱 세그멘테이션 모델(DeepLabV3)을 학습시키는 실험 파이프라인을 직접 설계했습니다. 혼동 행렬 분석으로 클래스별 성능 변화를 추적했습니다.",
+      result: "합성 데이터를 63%까지 증강하여 모델을 학습시킨 결과, 전체 성능(mIoU 0.58)이 유효하게 유지됨을 수치로 증명하여 실측 데이터 수집 비용 절감 근거를 마련했습니다.",
       links: [
         { title: "GitHub", url: "https://github.com/yourkik/CityScape-synthetic-data-check", iconName: "github" },
         { title: "보고서 보기", url: "https://detailed-nerine-1ce.notion.site/19d02e2b71278015a033c745f629192d?source=copy_link", iconName: "notion" }
