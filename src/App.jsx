@@ -46,6 +46,18 @@ const renderIcon = (iconName, size = 24, color = "currentColor", style = {}) => 
 
 function App() {
   const [isCopied, setIsCopied] = useState(false);
+  const [activeImage, setActiveImage] = useState(null);
+
+  // Escape key event listener to close image lightbox
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') {
+        setActiveImage(null);
+      }
+    };
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   // Intersection Observer for scroll animations
   useEffect(() => {
@@ -161,16 +173,27 @@ function App() {
               </div>
             </div>
 
-            <div className="project-content">
-              <p>
-                <span className="highlight">개요:</span> {project.overview}
-              </p>
-              <p>
-                <span className="highlight">문제 및 접근방식:</span> {project.approach}
-              </p>
-              <p>
-                <span className="highlight">결과:</span> {project.result}
-              </p>
+            <div className={`project-body-wrapper ${project.image ? 'has-image' : ''}`}>
+              <div className="project-content">
+                <p>
+                  <span className="highlight">개요:</span> {project.overview}
+                </p>
+                <p>
+                  <span className="highlight">문제 및 접근방식:</span> {project.approach}
+                </p>
+                <p>
+                  <span className="highlight">결과:</span> {project.result}
+                </p>
+              </div>
+              {project.image && (
+                <div 
+                  className="project-image-container"
+                  onClick={() => setActiveImage({ src: project.image, title: project.title })}
+                  style={{ cursor: 'zoom-in' }}
+                >
+                  <img src={project.image} alt={project.title} className="project-image" />
+                </div>
+              )}
             </div>
 
             {/* 프로젝트 관련 링크 추가 */}
@@ -223,6 +246,17 @@ function App() {
           </div>
         </div>
       </section>
+
+      {/* Lightbox Modal */}
+      {activeImage && (
+        <div className="modal-overlay" onClick={() => setActiveImage(null)}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <button className="modal-close" onClick={() => setActiveImage(null)}>✕</button>
+            <img src={activeImage.src} alt={activeImage.title} className="modal-image" />
+            {activeImage.title && <p className="modal-caption">{activeImage.title}</p>}
+          </div>
+        </div>
+      )}
     </div>
   );
 }
