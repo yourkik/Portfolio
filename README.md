@@ -1,3 +1,4 @@
+![AI-Assisted](https://img.shields.io/badge/AI--Assisted-Antigravity-blue?style=flat-square&logo=googlegemini&logoColor=white)
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
