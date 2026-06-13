@@ -39,57 +39,6 @@ export const portfolioData = {
   ],
   projects: [
     {
-      id: "fitting-space",
-      title: "가상 피팅 서비스 'Fitting Space' 파이프라인 및 MLOps 인프라 구축",
-      meta: [
-        { iconName: "BrainCircuit", text: "AI/MLOps & 클라우드 인프라" },
-        { text: "팀 프로젝트" }
-      ],
-      tags: ["Azure AKS", "Docker", "CatVTON", "SAM", "MLOps"],
-      overview: "온라인 의류 반품률 감소를 위한 가상 피팅 서비스 프로젝트에서 CatVTON 기반 이미지 생성 기능을 개발하고, Azure 클라우드 인프라 기반의 AI 파이프라인을 구축했습니다.",
-      approach: "사람 인식 개선을 위해 CatVTON과 SAM, Grounding DINO를 연계하여 이미지 생성 품질을 높였고, 고용량 GPU 연산을 분리 처리하여 안정성을 확보했습니다. 전체 프로젝트를 Docker 컨테이너화하여 ACR(Azure Container Registry)을 통해 AKS(Azure Kubernetes Service)에 배포했습니다.",
-      result: "최초 콜드 스타트를 제외하고 1분 이내의 생성 성능을 확보했으며, AKS Auto-Scaling 및 Service Bus를 통한 메시지 대기열 방식을 적용하여 트래픽 폭증 대응과 미사용 시 비용 절감(비용 효율성)을 달성했습니다.",
-      image: fittingSpaceDashboard,
-      links: [
-        { title: "GitHub", url: "https://github.com/hyeeeee-kim/FittingSpace", iconName: "github" }
-      ]
-    },
-    {
-      id: "gcf-project",
-      title: "GCF Project 정보 공개 통합 데이터베이스 구축",
-      meta: [
-        { iconName: "Database", text: "데이터 엔지니어링" },
-        { text: "팀 프로젝트" }
-      ],
-      tags: ["Python", "Pandas", "Data Pipeline"],
-      overview: "GCF Project 정보 공개 사이트 제작을 위해 다양한 포맷(VROD, OffsetDB 등)의 비정형 데이터를 확보, 분석 및 정제하여 하나의 일관된 데이터베이스를 구축했습니다.",
-      approach: "업데이트가 중단된 기존 API의 한계를 파악하여 원본 엑셀 파일에 직접 접근하는 추출 파이프라인을 구축했습니다. 상이한 데이터 표기법을 표준화하고 텍스트 정규화 전처리 로직을 설계했습니다.",
-      result: "다양한 이종 데이터를 통합하여 고품질의 DB를 성공적으로 구축하였으며, 향후 데이터 분석가가 즉시 활용할 수 있는 안정적인 환경을 마련했습니다.",
-      links: [
-        { title: "Colab", url: "https://colab.research.google.com/drive/1HneN3OGKX14mUDzNA7mdWhk5rXTLEraK?usp=sharing", iconName: "googleColab" }
-      ]
-    },
-    {
-      id: "ecommerce-growth",
-      title: "이커머스 Growth Hacking 대용량 로그 분석 및 BI 구축",
-      meta: [
-        { iconName: "Database", text: "데이터 분석 및 엔지니어링" },
-        { text: "개인 프로젝트" }
-      ],
-      tags: ["SQL", "BigQuery", "Python", "Looker Studio"],
-      overview: "약 5GB, 4,000만 건 이상의 대용량 이커머스 로그 데이터를 BigQuery 환경에 적재하고 AARRR 프레임워크 기반으로 분석한 그로스 해킹 프로젝트입니다.",
-      approach: "대용량 데이터를 분석하기 위한 인프라를 구축한 뒤, 퍼널 분석과 코호트 분석을 진행했습니다. 발견된 인사이트를 바탕으로 핵심 KPI를 실시간 모니터링할 수 있는 BI 대시보드를 연동했습니다.",
-      result: "가입 1일 차 이탈률(90%)의 병목을 수치화하고, 이를 개선하기 위한 CRM 마케팅 A/B 테스트 전략을 도출하여 데이터 기반의 실질적 해결책을 제시했습니다.",
-      image: ecommerce,
-      links: [
-        {
-          title: "보고서 보기",
-          url: "https://detailed-nerine-1ce.notion.site/Big-Query-Ecomerce-35f02e2b71278096848cea9e15dc6f39?source=copy_link",
-          iconName: "notion"
-        }
-      ]
-    },
-    {
       id: "subway-simulation",
       title: "다양한 공공 데이터 통합 기반 지하철 5호선 직결화 B/C 분석 시뮬레이터 개발",
       meta: [
@@ -121,6 +70,57 @@ export const portfolioData = {
       links: [
         { title: "GitHub", url: "https://github.com/yourkik/CityScape-synthetic-data-check", iconName: "github" },
         { title: "보고서 보기", url: "https://detailed-nerine-1ce.notion.site/19d02e2b71278015a033c745f629192d?source=copy_link", iconName: "notion" }
+      ]
+    },
+    {
+      id: "fitting-space",
+      title: "가상 피팅 서비스 'Fitting Space' 파이프라인 및 MLOps 인프라 구축",
+      meta: [
+        { iconName: "BrainCircuit", text: "AI/MLOps & 클라우드 인프라" },
+        { text: "팀 프로젝트" }
+      ],
+      tags: ["Azure AKS", "Docker", "CatVTON", "SAM", "MLOps"],
+      overview: "온라인 의류 반품률 감소를 위한 가상 피팅 서비스 프로젝트에서 CatVTON 기반 이미지 생성 기능을 개발하고, Azure 클라우드 인프라 기반의 AI 파이프라인을 구축했습니다.",
+      approach: "사람 인식 개선을 위해 CatVTON과 SAM, Grounding DINO를 연계하여 이미지 생성 품질을 높였고, 고용량 GPU 연산을 분리 처리하여 안정성을 확보했습니다. 전체 프로젝트를 Docker 컨테이너화하여 ACR(Azure Container Registry)을 통해 AKS(Azure Kubernetes Service)에 배포했습니다.",
+      result: "최초 콜드 스타트를 제외하고 1분 이내의 생성 성능을 확보했으며, AKS Auto-Scaling 및 Service Bus를 통한 메시지 대기열 방식을 적용하여 트래픽 폭증 대응과 미사용 시 비용 절감(비용 효율성)을 달성했습니다.",
+      image: fittingSpaceDashboard,
+      links: [
+        { title: "GitHub", url: "https://github.com/hyeeeee-kim/FittingSpace", iconName: "github" }
+      ]
+    },
+    {
+      id: "ecommerce-growth",
+      title: "이커머스 Growth Hacking 대용량 로그 분석 및 BI 구축",
+      meta: [
+        { iconName: "Database", text: "데이터 분석 및 엔지니어링" },
+        { text: "개인 프로젝트" }
+      ],
+      tags: ["SQL", "BigQuery", "Python", "Looker Studio"],
+      overview: "약 5GB, 4,000만 건 이상의 대용량 이커머스 로그 데이터를 BigQuery 환경에 적재하고 AARRR 프레임워크 기반으로 분석한 그로스 해킹 프로젝트입니다.",
+      approach: "대용량 데이터를 분석하기 위한 인프라를 구축한 뒤, 퍼널 분석과 코호트 분석을 진행했습니다. 발견된 인사이트를 바탕으로 핵심 KPI를 실시간 모니터링할 수 있는 BI 대시보드를 연동했습니다.",
+      result: "가입 1일 차 이탈률(90%)의 병목을 수치화하고, 이를 개선하기 위한 CRM 마케팅 A/B 테스트 전략을 도출하여 데이터 기반의 실질적 해결책을 제시했습니다.",
+      image: ecommerce,
+      links: [
+        {
+          title: "보고서 보기",
+          url: "https://detailed-nerine-1ce.notion.site/Big-Query-Ecomerce-35f02e2b71278096848cea9e15dc6f39?source=copy_link",
+          iconName: "notion"
+        }
+      ]
+    },
+    {
+      id: "gcf-project",
+      title: "GCF Project 정보 공개 통합 데이터베이스 구축",
+      meta: [
+        { iconName: "Database", text: "데이터 엔지니어링" },
+        { text: "팀 프로젝트" }
+      ],
+      tags: ["Python", "Pandas", "Data Pipeline"],
+      overview: "GCF Project 정보 공개 사이트 제작을 위해 다양한 포맷(VROD, OffsetDB 등)의 비정형 데이터를 확보, 분석 및 정제하여 하나의 일관된 데이터베이스를 구축했습니다.",
+      approach: "업데이트가 중단된 기존 API의 한계를 파악하여 원본 엑셀 파일에 직접 접근하는 추출 파이프라인을 구축했습니다. 상이한 데이터 표기법을 표준화하고 텍스트 정규화 전처리 로직을 설계했습니다.",
+      result: "다양한 이종 데이터를 통합하여 고품질의 DB를 성공적으로 구축하였으며, 향후 데이터 분석가가 즉시 활용할 수 있는 안정적인 환경을 마련했습니다.",
+      links: [
+        { title: "Colab", url: "https://colab.research.google.com/drive/1HneN3OGKX14mUDzNA7mdWhk5rXTLEraK?usp=sharing", iconName: "googleColab" }
       ]
     }
   ],
