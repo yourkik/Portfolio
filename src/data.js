@@ -1,7 +1,7 @@
 import fittingSpaceDashboard from './assets/fitting-space-dashboard.png';
 import subwaySimulation from './assets/subway-simulation.png';
 import ecommerce from './assets/Retention Cohort.png';
-import synthetic from './assets/SyntheticResult.png';
+import synthetic from './assets/syntheticResult.png';
 
 export const portfolioData = {
   hero: {
