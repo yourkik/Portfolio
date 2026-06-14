@@ -5,13 +5,13 @@ import synthetic from './assets/syntheticResult.png';
 
 export const portfolioData = {
   hero: {
-    tag: "AI & Data Analyst",
+    tag: "Data & MLOps Engineer",
     title: {
-      regular: "데이터 속에서 ",
-      gradient: "비즈니스 가치",
-      suffix: "를 발굴합니다"
+      regular: "AI 모델을 실제 서비스로 구현하는",
+      gradient: "데이터 & MLOps 엔지니어",
+      suffix: "입니다"
     },
-    description: "인공지능을 전공하며 데이터의 중요성을 깊이 이해하고, 통계적 분석과 머신러닝 기법을 활용하여 실질적인 문제 해결책을 도출하는 데이터 분석가입니다.",
+    description: "안정적인 대용량 데이터 파이프라인과 클라우드 인프라 구축을 넘어, AI 모델이 최적의 환경에서 동작할 수 있는 시스템을 설계합니다. 데이터에 대한 깊은 이해를 바탕으로 모델 최적화부터 MLOps 기반의 배포까지 주도하여, AI 기술을 실제 비즈니스 가치로 전환합니다.",
     email: "yourkik5@gmail.com",
     socialLinks: [
       {
@@ -23,18 +23,25 @@ export const portfolioData = {
   },
   about: [
     {
-      id: "data-decision",
+      id: "data-engineering",
       iconName: "Database",
       iconColor: "#3b82f6",
-      title: "데이터 기반 의사결정",
-      description: "단순한 추측이 아닌 OD 데이터, API 기반 이동 경로 등 철저한 데이터 수집과 가공을 통해 객관적인 시나리오를 구성하고 논리적인 결론을 도출합니다."
+      title: "데이터 파이프라인 및 인프라 구축",
+      description: "다양한 이종 데이터를 통합하고, Azure, Docker, BigQuery 등의 클라우드 인프라를 활용하여 안정적이고 효율적인 데이터 처리 파이프라인을 구축합니다."
     },
     {
-      id: "ai-model",
+      id: "ai-mlops",
       iconName: "BrainCircuit",
       iconColor: "#8b5cf6",
-      title: "AI 모델 및 통계 기법 활용",
-      description: "인공지능 전공 지식을 바탕으로 합성 데이터(Synthetic Data)를 통한 AI 학습 성능 개선부터, 다양한 통계 및 시뮬레이션 기법을 실무 문제에 적용할 수 있습니다."
+      title: "AI 모델 최적화 및 MLOps",
+      description: "인공지능 전공 지식을 바탕으로 생성형 AI 모델 성능 최적화, 합성 데이터(Synthetic Data) 검증, 그리고 클라우드 기반의 비용 효율적인 AI 모델 서빙 환경을 구축할 수 있습니다."
+    },
+    {
+      id: "data-decision",
+      iconName: "Map",
+      iconColor: "#10b981",
+      title: "데이터 기반 비즈니스 의사결정",
+      description: "대용량 로그 퍼널/코호트 분석과 네트워크 시뮬레이션을 통해 비즈니스 병목을 발견하고, 대시보드 시각화 및 A/B 테스트로 실질적인 의사결정을 이끌어냅니다."
     }
   ],
   projects: [
@@ -80,9 +87,9 @@ export const portfolioData = {
         { text: "팀 프로젝트" }
       ],
       tags: ["Azure AKS", "Docker", "CatVTON", "SAM", "MLOps"],
-      overview: "온라인 의류 반품률 감소를 위한 가상 피팅 서비스 프로젝트에서 CatVTON 기반 이미지 생성 기능을 개발하고, Azure 클라우드 인프라 기반의 AI 파이프라인을 구축했습니다.",
-      approach: "사람 인식 개선을 위해 CatVTON과 SAM, Grounding DINO를 연계하여 이미지 생성 품질을 높였고, 고용량 GPU 연산을 분리 처리하여 안정성을 확보했습니다. 전체 프로젝트를 Docker 컨테이너화하여 ACR(Azure Container Registry)을 통해 AKS(Azure Kubernetes Service)에 배포했습니다.",
-      result: "최초 콜드 스타트를 제외하고 1분 이내의 생성 성능을 확보했으며, AKS Auto-Scaling 및 Service Bus를 통한 메시지 대기열 방식을 적용하여 트래픽 폭증 대응과 미사용 시 비용 절감(비용 효율성)을 달성했습니다.",
+      overview: "온라인 의류 반품률 감소를 위한 가상 피팅 서비스 프로젝트에서 CatVTON 기반 이미지 생성 기능을 개발하고, Azure 클라우드 인프라 기반의 비용 효율적인 AI 파이프라인을 구축했습니다.",
+      approach: "여러 AI 모델의 비용을 시각화하는 대시보드를 구축하여 가장 효율적인 CatVTON 인스턴스를 채택했습니다. 전체 프로젝트를 Docker 컨테이너화하여 ACR(Azure Container Registry)을 통해 AKS(Azure Kubernetes Service)에 배포했습니다.",
+      result: "초기 AI 모델 선택 시 비용 분석을 통해 IDM-VTON 대비 월 $3,654의 인프라 비용을 절감했습니다. 또한 AKS Auto-Scaling을 적용하여 트래픽 폭증 대응과 미사용 시 비용 절감 효과를 극대화했습니다.",
       image: fittingSpaceDashboard,
       links: [
         { title: "GitHub", url: "https://github.com/hyeeeee-kim/FittingSpace", iconName: "github" }
