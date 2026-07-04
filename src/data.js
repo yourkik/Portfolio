@@ -2,6 +2,7 @@ import fittingSpaceDashboard from './assets/fitting-space-dashboard.png';
 import subwaySimulation from './assets/subway-simulation.png';
 import ecommerce from './assets/Retention Cohort.png';
 import synthetic from './assets/syntheticResult.png';
+import diseaseDashboard from './assets/disease-dashboard.png';
 
 export const portfolioData = {
   hero: {
@@ -45,6 +46,22 @@ export const portfolioData = {
     }
   ],
   projects: [
+    {
+      id: "disease-dashboard",
+      title: "AI 통합 감염병 조기 경보 대시보드",
+      meta: [
+        { iconName: "Activity", text: "Full-stack & Data Pipeline" },
+        { text: "팀 프로젝트" }
+      ],
+      tags: ["Next.js", "FastAPI", "dbt", "PostgreSQL", "Azure OpenAI"],
+      overview: "공공데이터의 지연 및 월별 지역 확진자 통계 누락 문제를 해결하기 위해, 누락된 시계열 통계를 복원하고 지역별 감염병 확산 경로를 직관적으로 시각화하는 조기 경보 대시보드를 구축했습니다.",
+      approach: "dbt와 PostgreSQL 기반의 ELT 아키텍처로 데이터를 정교하게 복원하고, GitHub Actions와 APScheduler를 활용해 파이프라인을 이원화했습니다. 또한 프롬프트 엔지니어링으로 Azure OpenAI의 의료 정책 필터를 우회하여 실시간 뉴스 RAG 기능을 구현했습니다.",
+      result: "파이프라인 분리와 캐싱 시스템 도입으로 API 응답 시간을 0.1초 이내로 단축해 UX를 개선하였으며, 백엔드 배포 용량을 350MB에서 30MB로 크게 줄여 아키텍처 최적화를 달성했습니다.",
+      image: diseaseDashboard,
+      links: [
+        { title: "GitHub", url: "https://github.com/yourkik/diseaseDashboard", iconName: "github" }
+      ]
+    },
     {
       id: "subway-simulation",
       title: "다양한 공공 데이터 통합 기반 지하철 5호선 직결화 B/C 분석 시뮬레이터 개발",
