@@ -49,22 +49,24 @@ export const portfolioData = {
   projects: [
     {
       id: "pet-walking-route",
+      order: 1,
       title: "데이터 엔지니어링 & 백엔드 & CI/CD: 반려동물 산책로 추천 시스템",
       meta: [
         { iconName: "Map", text: "Data Engineering & Backend" },
         { text: "팀 프로젝트" }
       ],
-      tags: ["FastAPI", "Databricks", "Azure Blob Storage·PostgreSQL", "GitHub Actions", "Delta Lake","Medallion Architecture"],
+      tags: ["FastAPI", "Databricks", "Azure Blob Storage·PostgreSQL", "GitHub Actions", "Delta Lake", "Medallion Architecture"],
       overview: "반려동물의 슬개골 보호를 위한 지형 정보 기반 맞춤형 산책로 추천 시스템을 개발하고, Azure 클라우드 환경에 배포했습니다.",
       approach: "Databricks 기반 Medallion Architecture 파이프라인 설계 및 GeoPandas를 활용한 이종 공간 데이터 전처리 파이프라인을 구축했습니다. FastAPI 백엔드에 캐싱 및 Fallback 메커니즘을 도입해 안정성을 높이고, GitHub Actions와 Azure App Service를 통해 CI/CD 배포 워크플로를 최적화했습니다.",
       result: "웹 지도 상 산책로 공간 데이터 이격률 0%를 달성하여 렌더링 정확도를 향상시키고, 외부 API 장애 시에도 서비스 가동률 99.9%를 유지했습니다. 또한 스케일링 전략으로 인프라 비용을 80% 이상 절감했습니다.",
       image: petRouteSystem,
       links: [
-        { title: "GitHub", url: "https://github.com/yourkik", iconName: "github" }
+        { title: "GitHub", url: "https://github.com/yourkik/Pet-Walk-SecondProjectTeam3", iconName: "github" }
       ]
     },
     {
       id: "disease-dashboard",
+      order: 2,
       title: "AI 통합 감염병 조기 경보 대시보드",
       meta: [
         { iconName: "Activity", text: "Full-stack & Data Pipeline" },
@@ -81,6 +83,7 @@ export const portfolioData = {
     },
     {
       id: "subway-simulation",
+      order: 6,
       title: "다양한 공공 데이터 통합 기반 지하철 5호선 직결화 B/C 분석 시뮬레이터 개발",
       meta: [
         { iconName: "Map", text: "5호선 직결화 시나리오 분석" },
@@ -98,6 +101,7 @@ export const portfolioData = {
     },
     {
       id: "synthetic-data",
+      order: 7,
       title: "AI 학습용 합성 데이터 검증 자동화 파이프라인 구축",
       meta: [
         { iconName: "Terminal", text: "Aimmo 현장실습 (2개월)" },
@@ -115,6 +119,7 @@ export const portfolioData = {
     },
     {
       id: "fitting-space",
+      order: 4,
       title: "가상 피팅 서비스 'Fitting Space' 파이프라인 및 MLOps 인프라 구축",
       meta: [
         { iconName: "BrainCircuit", text: "AI/MLOps & 클라우드 인프라" },
@@ -131,6 +136,7 @@ export const portfolioData = {
     },
     {
       id: "ecommerce-growth",
+      order: 3,
       title: "이커머스 Growth Hacking 대용량 로그 분석 및 BI 구축",
       meta: [
         { iconName: "Database", text: "데이터 분석 및 엔지니어링" },
@@ -151,6 +157,7 @@ export const portfolioData = {
     },
     {
       id: "gcf-project",
+      order: 5,
       title: "GCF Project 정보 공개 통합 데이터베이스 구축",
       meta: [
         { iconName: "Database", text: "데이터 엔지니어링" },

@@ -153,7 +153,7 @@ function BackendPortfolio() {
           <p>실제 데이터를 다루고 문제를 해결했던 핵심 경험입니다.</p>
         </div>
 
-        {portfolioData.projects.map((project, index) => (
+        {[...portfolioData.projects].sort((a, b) => a.order - b.order).map((project, index) => (
           <div key={project.id} className={`glass-panel project-card reveal ${index > 0 ? `delay-${index}` : ''}`}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', flexWrap: 'wrap', gap: '1rem' }}>
               <div>

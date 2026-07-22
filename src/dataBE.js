@@ -50,6 +50,7 @@ export const portfolioData = {
   projects: [
     {
       id: "pet-walking-route",
+      order: 1,
       title: "데이터 엔지니어링 & 백엔드 & CI/CD: 반려동물 산책로 추천 시스템",
       meta: [
         { iconName: "Map", text: "Data Engineering & Backend" },
@@ -66,6 +67,7 @@ export const portfolioData = {
     },
     {
       id: "game-recommendation",
+      order: 2,
       title: "Spring 기반 맞춤형 게임 추천 웹 서비스",
       meta: [
         { iconName: "Activity", text: "Backend Architecture" },
@@ -82,6 +84,7 @@ export const portfolioData = {
     },
     {
       id: "disease-dashboard",
+      order: 3,
       title: "클라우드 기반 대용량 감염병 대시보드 및 API 서버",
       meta: [
         { iconName: "Database", text: "Full-stack & API" },
@@ -98,6 +101,7 @@ export const portfolioData = {
     },
     {
       id: "twitter-clone",
+      order: 4,
       title: "트위터 클론 코딩 (웹 게시판 백엔드)",
       meta: [
         { iconName: "Terminal", text: "Backend Fundamentals" },
