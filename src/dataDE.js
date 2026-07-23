@@ -137,15 +137,15 @@ export const portfolioData = {
     {
       id: "ecommerce-growth",
       order: 3,
-      title: "이커머스 Growth Hacking 대용량 로그 분석 및 BI 구축",
+      title: "이커머스 Growth Hacking 데이터 분석 및 파이프라인 구축",
       meta: [
-        { iconName: "Database", text: "데이터 분석 및 엔지니어링" },
+        { iconName: "Database", text: "Data Engineering & Analytics" },
         { text: "개인 프로젝트" }
       ],
-      tags: ["SQL", "BigQuery", "Python", "Looker Studio"],
-      overview: "약 5GB, 4,000만 건 이상의 대용량 이커머스 로그 데이터를 BigQuery 환경에 적재하고 AARRR 프레임워크 기반으로 분석한 그로스 해킹 프로젝트입니다.",
-      approach: "대용량 데이터를 분석하기 위한 인프라를 구축한 뒤, 퍼널 분석과 코호트 분석을 진행했습니다. 발견된 인사이트를 바탕으로 핵심 KPI를 실시간 모니터링할 수 있는 BI 대시보드를 연동했습니다.",
-      result: "가입 1일 차 이탈률(90%)의 병목을 수치화하고, 이를 개선하기 위한 CRM 마케팅 A/B 테스트 전략을 도출하여 데이터 기반의 실질적 해결책을 제시했습니다.",
+      tags: ["BigQuery", "Apache Airflow", "Medallion Architecture", "Python", "Docker"],
+      overview: "대용량 이커머스 로그 데이터를 기반으로 파티셔닝·클러스터링 최적화를 거친 데이터 마트를 구축하고, Apache Airflow로 자동화된 ELT 파이프라인을 설계한 프로젝트입니다.",
+      approach: "BigQuery 내에 Medallion Architecture를 적용해 원천 데이터를 정제(Fact) 및 요약(Data Mart)했습니다. Apache Airflow를 도입해 데이터 파이프라인을 100% 무인화했으며, 퍼널·코호트 분석을 기반으로 A/B 테스트 가설을 수립했습니다.",
+      result: "약 5GB, 4,000만 건 데이터에 파티셔닝 및 클러스터링을 적용해 쿼리 스캔 비용과 성능을 획기적으로 개선하고 자동화된 KPI 실시간 모니터링 대시보드를 완성했습니다.",
       image: ecommerce,
       links: [
         {
