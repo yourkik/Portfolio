@@ -104,7 +104,7 @@ export const portfolioData = {
       order: 7,
       title: "AI 학습용 합성 데이터 검증 자동화 파이프라인 구축",
       meta: [
-        { iconName: "Terminal", text: "Aimmo 현장실습 (2개월)" },
+        { iconName: "Terminal", text: "Aimmo 현장실습 (1개월)" },
         { text: "현장 실습" }
       ],
       tags: ["Python", "PyTorch", "Synthetic Data"],
